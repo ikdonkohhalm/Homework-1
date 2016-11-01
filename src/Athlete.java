@@ -2,33 +2,13 @@
  * Created by Isaac Donkoh-Halm on 10/26/2016.
  */
 public class Athlete {
-<<<<<<< HEAD
-    CyclingResult;
-    BiathlonResult;
-    Athlete(CyclingResult, BiathlonResult){
-        this.CyclingResult=CyclingResult;
-        this.BiathlonResult=BiathlonResult;
-=======
     BiathlonResult br;
     CyclingResult cr;
     public Athlete(BiathlonResult br, CyclingResult cr){
         this.br=br;
         this.cr=cr;
->>>>>>> origin/master
     }
-class CyclingResult {
-    double time;
-    int position;
-    CyclingResult(double time, int position){
-        this.time=time;
-        this.position=position;
-    }
-class BiathlonResult {
-    int targetHit;
-    double trackRunTime;
-    
-}
-}
+
 }
 
 public class CyclingResult implements IEvent {
@@ -61,13 +41,13 @@ public class BiathlonResult implements IEvent {
     }
     public double pointsEarned() {
         return (round1.runTime + (5-round1.hitTargets))+
-        (round2.runTime + (5-round2.hitTargets))+
-        (round3.runTime + (5-round3.hitTargets));
+                (round2.runTime + (5-round2.hitTargets))+
+                (round3.runTime + (5-round3.hitTargets));
     }
     public BiathlonRound bestRound() {
         /* I F  S T A T E M E N T S
-           F 
-           
+           F
+
            S
            T
            A
@@ -78,7 +58,7 @@ public class BiathlonResult implements IEvent {
            N
            T
            S
-           
+
           */
     }
 }
@@ -90,7 +70,7 @@ public class BiathlonRound {
         this.hitTargets=hitTargets;
         this.runTime=runTime
     }
-    
+
 }
 
 interface IEvent {
