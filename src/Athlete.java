@@ -11,17 +11,26 @@ public class Athlete {
 
 }
 
-public class CyclingResult {
+public class CyclingResult implements IEvent {
     double time;
     int position;
     public CyclingResult (double time, int position) {
         this.time=time;
-        this.position=position
+        this.position=position;
+    }
+    public double pointsEarned () {
+        return this.time;
+        /*
+        Note: come back with if statements for the top 3 placed atheletes.
+                1st Place: 10 Points off
+                2nd Place: 7 points off
+                3rd Place: 3 points off
+        */
     }
 }
 
 
-public class BiathlonResult {
+public class BiathlonResult implements IEvent {
     BiathlonRound round1;
     BiathlonRound round2;
     BiathlonRound round3;
@@ -30,9 +39,12 @@ public class BiathlonResult {
         this.round2=round2;
         this.round3=round3;
     }
-    
+    public double pointsEarned() {
+        return (round1.runTime + (5-round1.hitTargets))+
+        (round2.runTime + (5-round2.hitTargets))+
+        (round3.runTime + (5-round3.hitTargets));
+    }
 }
-
 
 public class BiathlonRound {
     int hitTargets;
@@ -41,4 +53,8 @@ public class BiathlonRound {
         this.hitTargets=hitTargets;
         this.runTime=runTime
     }
+    
 }
+
+interface IEvent {
+    public double pointsEarned();
