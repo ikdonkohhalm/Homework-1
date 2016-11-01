@@ -44,6 +44,23 @@ public class BiathlonResult implements IEvent {
         (round2.runTime + (5-round2.hitTargets))+
         (round3.runTime + (5-round3.hitTargets));
     }
+    public BiathlonRound bestRound() {
+        /* I F  S T A T E M E N T S
+           F 
+           
+           S
+           T
+           A
+           T
+           E
+           M
+           E
+           N
+           T
+           S
+           
+          */
+    }
 }
 
 public class BiathlonRound {
