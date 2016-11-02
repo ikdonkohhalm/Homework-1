@@ -12,7 +12,7 @@ public class BiathlonResult implements IEvent {
         this.round3 = round3;
     }
 
-    public double pointsEarned() {
+    public double pointsEarned() { //Returns the points earned from rounds, determined by run time + the sum of the targets missed
         return (round1.runTime + (5 - round1.hitTargets)) +
                 (round2.runTime + (5 - round2.hitTargets)) +
                 (round3.runTime + (5 - round3.hitTargets));

@@ -21,9 +21,7 @@ public class Athlete {
             return other;
         }
     }
-    public Athlete betterCyclist2(Athlete other) {
 
-    }
 
 }
 
