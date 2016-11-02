@@ -24,7 +24,9 @@ public class BiathlonResult implements IEvent {
                 return (this.round1);
             } else if ((round1.runTime + (5 - round1.hitTargets)) == (round2.runTime + (5 - round2.hitTargets))) {
                 return (this.round1);
+
             }
+            return (this.round2);
         }
         if ((round2.runTime + (5 - round2.hitTargets)) < (round1.runTime + (5 - round1.hitTargets))) {
             if ((round2.runTime + (5 - round2.hitTargets)) < (round3.runTime + (5 - round3.hitTargets))) {
@@ -32,13 +34,17 @@ public class BiathlonResult implements IEvent {
             } else if ((round2.runTime + (5 - round2.hitTargets)) == (round3.runTime + (5 - round3.hitTargets))) {
                 return (this.round2);
             }
+            return (this.round3);
         }
         if ((round3.runTime + (5 - round3.hitTargets)) < (round1.runTime + (5 - round1.hitTargets))) {
             if ((round3.runTime + (5 - round3.hitTargets)) < (round2.runTime + (5 - round2.hitTargets))) {
                 return (this.round3);
             } else if ((round3.runTime + (5 - round3.hitTargets)) == (round1.runTime + (5 - round1.hitTargets))) {
                 return (this.round1);
+
             }
+            return (this.round1);
         }
-    }
+    return(this.round1);}
 }
+

@@ -15,7 +15,7 @@ public class Athlete {
         return (this.totalScore()<other.totalScore());
     }
     public Athlete betterCyclist1(Athlete other) {
-        if (this.cr < other.cr) {
+        if (this.cr.pointsEarned() < other.cr.pointsEarned()) {
             return this;
         } else {
             return other;

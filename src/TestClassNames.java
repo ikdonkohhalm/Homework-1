@@ -40,7 +40,7 @@ public class TestClassNames {
 
         // test betterCyclist methods
         a = athlete1.betterCyclist1(athlete2);
-        a = athlete1.betterCyclist2(athlete2);
+        //a = athlete1.betterCyclist2(athlete2);
 
         System.out.println("Congrats! Your program compiled and ran!");
 
