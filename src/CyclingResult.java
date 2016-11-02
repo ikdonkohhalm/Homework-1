@@ -4,17 +4,21 @@
 public class CyclingResult implements IEvent {
     double time;
     int position;
-    public CyclingResult (double time, int position) {
-        this.time=time;
-        this.position=position;
+
+    public CyclingResult(double time, int position) {
+        this.time = time;
+        this.position = position;
     }
-    public double pointsEarned () {
-        return this.time;
-        /*
-        Note: come back with if statements for the top 3 placed atheletes.
-                1st Place: 10 Points off
-                2nd Place: 7 points off
-                3rd Place: 3 points off
-        */
+
+    public double pointsEarned() {
+        if (this.position == 1) {
+            return (this.time - 10);
+        } else if (this.position == 2) {
+            return (this.time - 7);
+        } else if (this.position == 3) {
+            return (this.time - 3);
+        } else {
+            return this.time;
+        }
     }
 }
