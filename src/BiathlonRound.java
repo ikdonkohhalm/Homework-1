@@ -9,4 +9,5 @@ public class BiathlonRound {
         this.runTime=runTime;
     }
 
+
 }

@@ -8,8 +8,25 @@ public class Athlete {
         this.br=br;
         this.cr=cr;
     }
+    public double totalScore(){
+        return cr.pointsEarned()+br.pointsEarned();
+    }
+    public boolean hasBeaten(Athlete other){
+        return (this.totalScore()<other.totalScore());
+    }
+    public Athlete betterCyclist1(Athlete other) {
+        if (this.cr < other.cr) {
+            return this;
+        } else {
+            return other;
+        }
+    }
+    public Athlete betterCyclist2(Athlete other) {
+
+    }
 
 }
+
 
 
 
